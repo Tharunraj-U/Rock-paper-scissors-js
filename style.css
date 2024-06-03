@@ -1,8 +1,7 @@
 body{
     background-color:rgb(25, 25, 25);
     color: white;
-    width: 1500px;
-    height: 100px;
+    
     
    }
   .maindiv{
@@ -56,6 +55,8 @@ body{
    border-radius: 60px;
    font-weight: bolder;
    border: none;
+      width: 1000px;
+   margin: 200px;
  }
  .p2{
    font-family: Arial, Helvetica, sans-serif;
