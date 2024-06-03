@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <link rel="stylesheet" href="style.css" >
+</head>
+                                <body>
+                                  <p class="p2">Rock Paper  And Scissor</p>
+                                  <div class="maindiv">
+                                    <button class="emj"  
+                                      onclick="
+                                      let res1='rock';
+                                      funobj.outerfunction(res1);">
+                                    <img src="img/rock-emoji.png" class="img1">
+                                </button>
+                                <button  class="emj"  
+                                     onclick="
+                                     let res2='paper';
+                                     funobj.outerfunction(res2);">
+                                    <img src="img/paper-emoji.png" class="img1">
+                                </button>
+                                <button class="emj" 
+                                     onclick="let res3='scissors';
+                                    funobj.outerfunction(res3);">
+                                   <img src="img/scissors-emoji.png" class="img1">
+                                </button>
+                                  </div>
+                                
+                                <p  class="p">
+                                 
+                                   
+                                   Wins:0, Lose:0,
+                                  Tie:0
+                                  </p>
+                                <button  class="reset"
+                                        onclick="
+                                     obj.Lose=0;
+                                     obj.Tie=0;
+                                     obj.Wins=0;
+                                     localStorage.removeItem('obj');
+                                     dis();
+                                     
+                                     ">
+                                    Reset
+                                </button>
+                               
+
+                               
+
+                                <script src="script.js"> </script>
+       </body>       
+</html>
