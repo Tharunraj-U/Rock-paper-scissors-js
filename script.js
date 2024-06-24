@@ -4,6 +4,24 @@
             Tie:0,
             Wins:0
           };
+          let autop=false;
+          let val;
+         
+          function autoplay(){
+            
+          
+            if(autop ===false){
+            val=setInterval(function(){
+              const res2=computermove();
+              funobj.outerfunction(res2);
+              autop=true;
+               
+            },1000);
+          }else{
+              clearInterval(val);
+               autop=false;
+          }
+          }
           function dis(){
           let pobj=document.querySelector('.p');
           pobj.innerHTML=`
@@ -11,23 +29,24 @@
           Tie:0
           `;
           } 
+                
+          function computermove() {
+            let val2 = Math.random();
+            if (val2 <= 1/3) {
+              return  'paper';
+            } else if (val2 <= 2/3) {
+              return  'rock';
+            } else {
+              return 'scissors';
+            }
+          }
+      
             
         const funobj={ 
           outerfunction:function(res){
 
-            
-
-        let val2=Math.random();
-          let res2;
-          if(val2>0 && val2 <=1/3){
-            res2='rock';
-          }
-          else if(val2>0 && val2 <2/3){
-            res2='paper';
-          }
-          else if(val2>0 && val2 <1){
-            res2='scissors';
-          }
+      
+            const res2=computermove();
           
           let ans;
           if(res == res2){
@@ -37,6 +56,9 @@
             ans='$$ You won &#128512$$';
           }
           else if(res=='paper' && res2=='rock'){
+            ans='$$ You won &#128512$$';
+          }
+          else if(res=='scissors' && res2=='paper'){
             ans='$$ You won &#128512$$';
           }
           else{
@@ -68,4 +90,36 @@
           }
           
         }
+
+        document.querySelector('.emj').addEventListener('click',()=>{
+         
+          let res1='rock';
+          funobj.outerfunction(res1);
+        });
+        document.querySelector('.emj1').addEventListener('click',()=>{
+         
+          let res1='paper';
+          funobj.outerfunction(res1);
+        });
+        document.querySelector('.emj2').addEventListener('click',()=>{
+          
+          let res1='scissors';
+          funobj.outerfunction(res1);
+        });
+        document.body.addEventListener('keydown',(val)=>{
+          
+          if(val.key == 'r'){
+            let res1='rock';
+            funobj.outerfunction(res1);
+          }
+          if(val.key == 'p'){
+            let res1='paper';
+          funobj.outerfunction(res1);
+          }
+          if(val.key == 's'){
+            let res1='scissors';
+            funobj.outerfunction(res1);
+          }
+        });
                 
+ 
